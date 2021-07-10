@@ -1,0 +1,28 @@
+<div
+  class="d-flex justify-content-center align-items-center container"
+  style="height: 100vh"
+>
+  <div class="w-100" style="margin-top: -100px">
+    <div class="d-flex justify-content-center">
+      <img
+        src="../../../assets/logo.png"
+        width="500"
+        class="justify-content-center"
+        alt="CnpjGoogle"
+      />
+    </div>
+    <form class="row justify-content-center" style="margin-top: -40px">
+      <mat-form-field class="col-md-5" appearance="outline">
+        <mat-label>Buscar CNPJ</mat-label>
+        <input
+          matInput
+          [(ngModel)]="cnpj"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <mat-icon style="cursor: pointer" matSuffix (click)="searchCNPJ()"
+          >search</mat-icon
+        >
+      </mat-form-field>
+    </form>
+  </div>
+</div>
