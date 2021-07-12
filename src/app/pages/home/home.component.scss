@@ -1,0 +1,39 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-input-container {
+  height: 40px;
+  width: 500px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  background-color: #fff;
+  margin-top: 10px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 6%);
+
+  img {
+    width: 20px;
+    margin-right: 5px;
+  }
+}
+
+input {
+  border: none;
+  outline: 0;
+  width: 100%;
+  color: #5f5f5f;
+
+  &::placeholder {
+    color: #adadad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+  }
+}

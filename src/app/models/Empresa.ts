@@ -8,7 +8,7 @@ export interface Billing {
   database: boolean;
 }
 
-export interface CNPJ {
+export interface Empresa {
   atividadePrincipal: ActivityItem[];
   dataSituacao: string;
   tipo: string;

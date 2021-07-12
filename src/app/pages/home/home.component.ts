@@ -3,24 +3,41 @@ import { ReceitaFederalService } from 'src/app/services/receitaFederal.service';
 
 @Component({
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.sass'],
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
   cnpj: string = '';
 
-  constructor(private receitaFederal: ReceitaFederalService) {}
+  constructor(private receitaFederalService: ReceitaFederalService) {}
 
   ngOnInit(): void {}
+
+  onKeyPress(event: any): void {
+    if (event.key === 'Enter') {
+      this.searchCNPJ();
+    }
+  }
+
   searchCNPJ(): void {
-    console.log('ixi');
-    this.receitaFederal
-      .searchCNPJ(this.cnpj)
-      .subscribe(
-        (response) => {
-          console.log(response);
-        },
-        () => {}
-      )
-      .add(() => {});
+    if (!this.validateForm()) {
+      return;
+    }
+
+    this.receitaFederalService
+      .searchCNPJ(this.getCnpj())
+      .subscribe((response) => console.log(response));
+  }
+
+  private onlyNumbers(str: string): string {
+    return str.replace(/[^0-9]/g, '');
+  }
+
+  private getCnpj(): string {
+    return this.onlyNumbers(this.cnpj);
+  }
+
+  private validateForm(): boolean {
+    const cnpj = this.getCnpj();
+    return String(cnpj).length === 14;
   }
 }
