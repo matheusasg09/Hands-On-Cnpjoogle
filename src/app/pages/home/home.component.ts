@@ -3,7 +3,7 @@ import { ReceitaFederalService } from 'src/app/services/receitaFederal.service';
 
 @Component({
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.sass'],
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
   cnpj: string = '';
