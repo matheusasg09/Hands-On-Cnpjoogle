@@ -1,8 +1,15 @@
-<div class="d-flex justify-content-center flex-column align-items-center">
-  <img src="../../../assets/logo.svg" width="300" alt="CnpjGoogle" />
+<div class="home-container">
+  <img src="../../../assets/logo.png" width="360" alt="CnpjGoogle" />
 
   <div class="main-input-container">
-    <input type="text" class="main-input" placeholder="Insira o CNPJ aqui..." />
     <img src="../../../assets/lupa.svg" alt="pesquisar" />
+    <input
+      type="text"
+      class="main-input"
+      placeholder="Insira o CNPJ aqui..."
+      mask="00.000.000/0000-00"
+      [(ngModel)]="cnpj"
+      (keypress)="onKeyPress($event)"
+    />
   </div>
 </div>
