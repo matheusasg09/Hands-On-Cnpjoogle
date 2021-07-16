@@ -8,7 +8,7 @@ export interface Billing {
   database: boolean;
 }
 
-export interface Empresa {
+export interface Enterprise {
   atividadePrincipal: ActivityItem[];
   dataSituacao: string;
   tipo: string;

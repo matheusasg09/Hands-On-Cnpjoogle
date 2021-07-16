@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReceitaFederalService } from 'src/app/services/receitaFederal.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './home.component.html',
@@ -8,7 +8,7 @@ import { ReceitaFederalService } from 'src/app/services/receitaFederal.service';
 export class HomeComponent implements OnInit {
   cnpj: string = '';
 
-  constructor(private receitaFederalService: ReceitaFederalService) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -23,9 +23,7 @@ export class HomeComponent implements OnInit {
       return;
     }
 
-    this.receitaFederalService
-      .searchCNPJ(this.getCnpj())
-      .subscribe((response) => console.log(response));
+    this.router.navigate([this.cnpj]);
   }
 
   private onlyNumbers(str: string): string {
