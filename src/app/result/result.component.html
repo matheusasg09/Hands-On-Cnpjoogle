@@ -1,0 +1,54 @@
+<div class="container">
+  <img src="../../../assets/logo.png" class="logo" />
+
+  <img *ngIf="!enterprise" src="../../assets/loader.gif" class="loader" />
+  <div class="result-container" *ngIf="enterprise">
+    <div>
+      <span class="title">CNPJ</span>
+      <span class="value">{{ enterprise.cnpj }}</span>
+
+      <span class="title">Nome</span>
+      <span class="value">{{ enterprise.nome }}</span>
+
+      <span class="title">Telefone</span>
+      <span class="value">{{ enterprise.telefone }}</span>
+
+      <span class="title">Porte</span>
+      <span class="value">{{ enterprise.porte }}</span>
+
+      <span class="title">Nome Fantasia</span>
+      <span class="value">{{ enterprise.fantasia }}</span>
+
+      <span class="title">Atividade Principal</span>
+      <span class="value">{{ enterprise.fantasia }}</span>
+
+      <span class="title">Última Atualização</span>
+      <span class="value">{{ enterprise.fantasia }}</span>
+
+      <span class="title">Situação</span>
+      <span class="value">{{ enterprise.situacao }}</span>
+
+      <span class="title">E-mail</span>
+      <span class="value">{{ enterprise.email }}</span>
+    </div>
+    <div>
+      <span class="title">CEP</span>
+      <span class="value">{{ enterprise.cep }}</span>
+
+      <span class="title">Logradouro</span>
+      <span class="value">{{ enterprise.logradouro }}</span>
+
+      <span class="title">Complemento</span>
+      <span class="value">{{ enterprise.complemento }}</span>
+
+      <span class="title">Bairro</span>
+      <span class="value">{{ enterprise.bairro }}</span>
+
+      <span class="title">Cidade</span>
+      <span class="value">{{ enterprise.municipio }}</span>
+
+      <span class="title">UF</span>
+      <span class="value">{{ enterprise.uf }}</span>
+    </div>
+  </div>
+</div>

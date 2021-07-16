@@ -1,0 +1,34 @@
+.container {
+  padding: 1rem;
+}
+
+.logo {
+  width: 150px;
+}
+
+.result-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+}
+
+span {
+  display: block;
+
+  &.title {
+    color: #1a0dab;
+  }
+
+  &.value {
+    color: #939393;
+    margin-bottom: 10px;
+  }
+}
+
+.loader {
+  width: 100px;
+  text-align: center;
+  margin-top: 100px;
+  display: block;
+  margin: 0 auto;
+}
